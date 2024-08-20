@@ -1,14 +1,13 @@
 class Restaurante:
-    nome = ''
-    categoria = ''
-    ativo = False
+    def __init__(self, nome, categoria) -> None:  # método construtor __init__
+        self.nome = nome
+        self.categoria = categoria
+        self.ativo = False
 
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Gourmet'
+restaurante_praca = Restaurante('Praça', 'Gourmet')
+restaurante_pizza = Restaurante('Pizza express', 'Italiana')
 
+restaurantes = [restaurante_praca, restaurante_pizza]
 
-restaurante_pizza = Restaurante()
-
-restauntes = [restaurante_praca, restaurante_pizza]
-print(dir(restauntes))
+print(vars(restaurante_praca))
+print(vars(restaurante_pizza))
